@@ -1,24 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import { useSpring, animated } from 'react-spring';
 
 function App() {
+  const props = useSpring({ to: { opacity: 1 }, from: { opacity: 0 } });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <main className='App-main'>
+        <animated.div style={props}>
+          <h1>I will fade in</h1>
+        </animated.div>
+      </main>
+    </>
   );
 }
 
