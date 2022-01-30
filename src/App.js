@@ -8,9 +8,9 @@ function App() {
   return (
     <>
       <main className='App-main'>
-        <animated.div style={props}>
-          <h1>I will fade in</h1>
-        </animated.div>
+        <animated.h1 style={props}>
+          I will fade in
+        </animated.h1>
       </main>
     </>
   );
